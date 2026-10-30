@@ -1,7 +1,8 @@
 <?php
-require_once 'Cliente.php';
+require_once 'Funcionarios.php';
 if($_SERVER['REQUEST_METHOD']=='POST'){
-$c1 = new Cliente($_POST['nome'], $_POST['idade'], $_POST['salario']);}
+    // Passando os atributos obtidos pelo Post para o cadastro do Usuário
+$c1 = new Funcionario($_POST['nome'], $_POST['idade'], $_POST['salario']);}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,7 @@ $c1 = new Cliente($_POST['nome'], $_POST['idade'], $_POST['salario']);}
         <input type="submit" value="cadastrar">
     </form>
     <?php
+    // Demonstra os dados recebidos
     if(isset($c1)){
     $c1->mostrarDados();
     }

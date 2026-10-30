@@ -4,7 +4,9 @@ class Cliente {
     public string $nome;
     public int $idade;
 
+    // cadastrando os  utilizando o NEW
     public function __construct(string $nome, int $idade){
+        // Referenciando objeto orientado com $this
         $this->nome = $nome;
         $this->idade = $idade;
         $this->cadastrar();
